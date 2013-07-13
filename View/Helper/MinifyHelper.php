@@ -1,7 +1,7 @@
 <?php
 /**
- *  Helper Minify - compress Js and CSS in a easy way and on the fly
- *  Baseado no Plugin Easy Compressor Plugin do
+ *    Helper Minify - compress Js and CSS in a easy way and on the fly
+ *    Baseado no Plugin Easy Compressor 
  *    Glauco Custódio (@glauco_dsc) <glauco.custodio@gmail.com>     
  *    https://github.com/glaucocustodio/easy-compressor-plugin
  *    http://blog.glaucocustodio.com - http://glaucocustodio.com
