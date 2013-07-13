@@ -5,9 +5,7 @@
  *    Glauco Custódio (@glauco_dsc) <glauco.custodio@gmail.com>     
  *    https://github.com/glaucocustodio/easy-compressor-plugin
  *    http://blog.glaucocustodio.com - http://glaucocustodio.com
- *  Adaptado por Vicente Eugenio
- *  https://github.com/veugenio
- *  https://github.com/veugenio/helper-easy-minify
+ * 
  */
 App::uses('HtmlHelper', 'View/Helper');
 class MinifyHelper extends HtmlHelper {
@@ -50,14 +48,14 @@ class MinifyHelper extends HtmlHelper {
         
         App::import('Vendor', 'jsmin', array('file' => 'jsmin/jsmin.php'));
 
-         // apagar todos os arquivos que começam por js.min_ preisa miorá
-        // $pasta = opendir(JS);
-        // while ($oldJs = readdir($pasta)){
-        //     if ($oldJs != '.' && $oldJs != '..'){
-        //         if(substr($oldJs, 0,7) == 'js.min_')
-        //           unlink(JS.$oldJs);
-        //     }
-        // }
+        //apagar todos os arquivos que começam por js.min_ 
+      /*  $pasta = opendir(JS);
+        while ($oldJs = readdir($pasta)){
+            if ($oldJs != '.' && $oldJs != '..'){
+                if(substr($oldJs, 0,7) == 'js.min_')
+                  unlink(JS.$oldJs);
+            }
+        }*/
 
         $jsFinal = null;
         foreach($arquivos as $c){
@@ -84,13 +82,13 @@ class MinifyHelper extends HtmlHelper {
       if (!file_exists(CSS . $nomeArquivo)) {
         App::import('Vendor', 'cssmin', array('file' => 'cssmin/CssMin.php'));
         // apagar todos os arquivos que começam por css.min_
-        $pasta = opendir(CSS);
+      /* $pasta = opendir(CSS);
         while ($oldCss = readdir($pasta)){
             if ($oldCss != '.' && $oldCss != '..'){
                   if(substr($oldCss, 0,8) == 'css.min_')
                     unlink(CSS.$oldCss);
             }
-        }
+        }*/
         $final = null;
         foreach($arquivos as $c){
           $final .= CssMin::minify(file_get_contents(CSS.$c.'.css'));
